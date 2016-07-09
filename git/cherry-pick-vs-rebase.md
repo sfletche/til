@@ -1,15 +1,14 @@
-Today I learned why git cherry-pick is sometimes easier than git rebase.
+Today I learned why git cherry-pick is sometimes less problematic than git rebase.
 
-I rebase often.  
-Occasionally the `rebase` is particularly problematic (lots of merge conflicts) 
-and my solution in such cases is to `cherry-pick` the individual commits onto master branch. 
-I do this because nearly every time I do, the number of conflicts is considerably less.
+I rebase often.  Occasionally the `rebase` is particularly problematic (lots of merge conflicts) 
+and my solution in such cases is to `cherry-pick` the individual commits onto master branch, which 
+for some reason, produces far fewer conflicts than rebasing.
 
-My question was why this would be the case.  
+Until today, I didn't understand why this would be the case.  Isn't rebasing essentially the same as cherry-picking?
 
-After talking with some knowledgable co-workers, I finally understand why.
+After talking with some more knowledgable co-workers, I finally understand why.
 
-Say I have the following 
+Say I have two feature branches, one branched from the other 
     
     A-B-C (master)
        \
@@ -17,14 +16,14 @@ Say I have the following
            \
             F-G (other-next)
     
-And then I do the following 
+And then I merge the main feature branch onto master
 
     git checkout next
     git rebase master
     git checkout master
     git merge next
 
-I end up with the following
+I then end up with the following
 
     A-B-C-D`-E` (master)
        \ \
@@ -34,7 +33,7 @@ I end up with the following
              \
               F-G (other-next)
 
-From here, I can either rebase or cherry-pick other-next onto master to get what I want...
+From here, I can either `rebase` or `cherry-pick` `other-next` onto `master` to get what I want...
 
 **Rebasing example**
 
@@ -54,14 +53,17 @@ produces the same result
 
     A-B-C-D`-E`-F`-G` (master)
 
-but cherry-picking resulted in far fewer merge conflicts than rebasing.
+but cherry-picking resulted in far fewer merge conflicts than rebasing.  Why would this be the case?
 
-After talking with the co-workers mentioned above I think I now understand why.
+After talking with the co-workers mentioned above I I now understand why.
 
-In the rebase example, when I rebase other-next onto master, git goes back to the common ancestor, B, 
-and rebases all commits from that ancestor to the tip of other-next on top of master. 
+In the rebase example, when I rebase `other-next` onto `master`, git needs to first find the common ancestor, `B`, 
+and then git rebases all commits from that ancestor to the tip of `other-next`. 
 (More details about git's rebase decision making can be found [here](http://stackoverflow.com/a/38253199/379512).)
-The side effect of this is that if there were merge conflicts when rebasing next on top of master, 
-then those same conflicts will re-emerge when rebasing those same commits again on top of master as part of the 
-other-next rebase.  
-Cherry picking on the other hand is limited to those commits on the other-next branch alone.
+The side effect of this is that if there were merge conflicts when rebasing `next` onto `master`, 
+then those same conflicts will re-emerge when rebasing `other-next` onto master, because those same commits 
+are part of the trail from `other-next` to the common ancestor, `B`.  
+Cherry picking on the other hand is limited to only those commits on the `other-next` branch, and so those conflicts 
+from the `next` remnants are bypassed and the cherry picking results in fewer conflicts.  
+
+viola.

@@ -1,1 +1,5 @@
+`stopPropagation` stops the event from bubbling up the event chain.  
+In other words, prevents the event from being handled by other event handlers.
 
+`preventDefault` prevents the default action the browser makes on that event.  
+Prevents, for example, a form from being submitted through standard html protocol.  

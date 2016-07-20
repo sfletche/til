@@ -1,0 +1,3 @@
+Hapless
+
+Def. unfortunate, unlucky

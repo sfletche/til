@@ -12,7 +12,7 @@ Which for the last couple months was painfully followed by...
 5. right arrow
 6. option-shift-left-arrow to highlight and delete the bits that are out of date and replace them with an up to date url
 
-Today I learned how to remove an item from Chrome's auto-complete list  :)
+Today I learned how to remove an item from Chrome's auto-complete list!
 
 1. cmd-t 
 1. type the same couple characters

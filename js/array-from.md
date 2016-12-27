@@ -24,7 +24,7 @@ function bar() {
 bar(17, 23, 42);
 ```
 
-UPDATE:  A still more convenient way for creating an array from an array-like object...
+UPDATE:  Use the spread operator (...) for an even more convenient way to create an array from an array-like object...
 
 ```
 function foo() {

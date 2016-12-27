@@ -23,3 +23,13 @@ function bar() {
 }
 bar(17, 23, 42);
 ```
+
+UPDATE:  A still more convenient way for creating an array from an array-like object...
+
+```
+function foo() {
+  const args = [...arguments];
+  // [17, 23, 42]
+}
+foo(17, 23, 42);
+```

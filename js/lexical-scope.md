@@ -2,7 +2,7 @@ For years I've thought lexical scope was equivalent to function level scope.
 I read it somewhere, took it as fact, and dismissed any evidenc to the contrary.
 Today, while reading [Kyle Simpson's Scope & Closures](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/README.md#you-dont-know-js-scope--closures), I learned that I was wrong.
 
-Block Scope
+###Block Scope
 
 Most programming languages use Block level scope, which scopes a declaration to the block (think curly braces) in which it is declared.
 For example
@@ -19,7 +19,7 @@ function foo(a) {
 foo(true);
 ```
 
-Function Scope
+###Function Scope
 
 Rather than use Block scoping, Javascript's `var` uses Function scope.
 This means that any `var` within a function is declared for the entire function (and not just the block in which it is declared).
@@ -52,13 +52,13 @@ function foo(a) {
 foo(true);
 ```
 
-Lexical Scope
+###Lexical Scope
 
 Lexical scope is less about the *where* of a variable's scope and more about the *when*.
 Languages that use lexical scope, are able to determine the scope of a declaration **at compile-time** (during lexical analysis).
 This enables performance enhancements through compiler optimizations (think V8 engine).
 
-Dynamic Scope
+###Dynamic Scope
 
 Lexical scoping can be contrasted with Dynamic scoping, in which the scope of a variable is not determined until execution time.  
 

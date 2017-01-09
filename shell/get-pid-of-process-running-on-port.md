@@ -17,7 +17,7 @@ kill -9 <pid>
 But this time, `ps` showed no such processes.  (I'm guessing because the process in question had become orphaned, but I'm guessing)
 
 After a gazillion posts on stackoverflow gave me nothing that worked, I finally found 
-[one answer|http://stackoverflow.com/a/30163868/379512] suggesting [`lsof`|https://en.wikipedia.org/wiki/lsof] 
+[one answer](http://stackoverflow.com/a/30163868/379512) suggesting [`lsof`](https://en.wikipedia.org/wiki/lsof)
 to list all open files belonging to all active processes (with `-i` to ignore the device cache file, and `tcp:` to identify the local port number).  
 
 

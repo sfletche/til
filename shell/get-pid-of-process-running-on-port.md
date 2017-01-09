@@ -18,7 +18,7 @@ But this time, `ps` showed no such processes.  (I'm guessing because the process
 
 After a gazillion posts on stackoverflow gave me nothing that worked, I finally found 
 [one answer|http://stackoverflow.com/a/30163868/379512] suggesting [`lsof`|https://en.wikipedia.org/wiki/lsof] 
-to list all open files belonging to all active processes (with `-i` to ignore the device cache file, and `tcp:` to identify the local port number).  (EDIT: alternatively (and possibly easier to remember) `lsof | grep <port num>`)
+to list all open files belonging to all active processes (with `-i` to ignore the device cache file, and `tcp:` to identify the local port number).  
 
 
 **Success!**
@@ -29,3 +29,5 @@ kill -9 <pid>
 ```
 
 Viola.  Process identified and destroyed.  :)
+
+**EDIT**: alternatively (and possibly easier to remember) `lsof | grep <port num>`

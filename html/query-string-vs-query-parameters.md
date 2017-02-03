@@ -1,5 +1,4 @@
-As has often been the case I regularly fail to absorb vocabulary from my day-to-day environment.  
-And for too long I've failed to digest the distinction between query parameters and query strings, to I finally looked it up...
+For too long I've failed to discern the distinction between query parameters and query strings, to I finally looked it up...
 
 A Query String is what often accompanies the URL path in a GET request (e.g. `name=forest` in `http://example.com/over/there?name=forest`).
 The Query Parameters are either the components of the query string or passed as part of the request body.  

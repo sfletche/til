@@ -2,7 +2,7 @@ Today I learned that JS imports have immutable bindings, while imported objects 
 
 File #1
 
-    export const obj = { foo: 23 };
+    export let obj = { foo: 23 };
     export let pi = 3.14
     
 File #2
@@ -11,7 +11,7 @@ File #2
 
     obj.bar = 17; // works fine because imported objects are not immutable
 
-    obj = { bar: 17 }; // fails with syntax error because import bindings are immutable (and not because obj is originally declared as a const)
+    obj = { bar: 17 }; // fails with syntax error because import bindings are immutable
 
     obj.foo = 32; // fails because imported values are non-writable (should fail without error)
 

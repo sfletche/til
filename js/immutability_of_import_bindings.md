@@ -1,4 +1,4 @@
-Today I learned that JS imports have immutable bindings, and imported objects are non-writable.
+Today I learned that JS imports have immutable bindings, while imported objects are non-writable.
 
 File #1
 

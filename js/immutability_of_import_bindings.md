@@ -9,7 +9,7 @@ File #2
 
     import { obj, pi } from './file-1';
 
-    obj.bar = 17; // works fine because imported values are not immutable
+    obj.bar = 17; // works fine because imported objects are not immutable
 
     obj = { bar: 17 }; // fails with syntax erro because import bindings are immutable (and not because obj is originally declared as a const)
 

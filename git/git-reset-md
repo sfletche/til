@@ -1,0 +1,15 @@
+Today I learned about `git reset --mixed` and how it differs from `git reset --hard` and `git reset --soft`...
+
+Given the following commit history on `master`
+A -> B -> C 
+
+`git reset --mixed B` (NOTE: `--mixed` is the default option for `reset`)
+`HEAD`, `master`, and the index all point to `B` (changes to `C` persist in the working directory but are not staged)
+(Running `git commit` at this point, will do nothing, as those changes made to `C` are not staged)
+
+`git reset --soft B`
+`HEAD` and `master` now point to `B`, while the index (staged files in working directory) contains changes from `C`
+(Running `git commit` at this point, will produce a new commit identical to `C`)
+
+`git reset --hard B`
+`HEAD`, `master`, and the index now point to `B` and none of the changes made to `C` are persisted in your working directory

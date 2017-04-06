@@ -13,3 +13,6 @@ A -> B -> C
 
 `git reset --hard B`
 `HEAD`, `master`, and the index now point to `B` and none of the changes made to `C` are persisted in your working directory
+
+A Bonus benefit to `git reset --mixed` (again it's the default option, you don't actually need to include the `--mixed` argument),
+is that it can be used to unstage all files in your working directory.  

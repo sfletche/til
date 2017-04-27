@@ -1,6 +1,6 @@
 Today I learned that JS imports have immutable bindings, which differ between named and default exports/imports.
 
-Named exports are actual bindings (kind of like pointers) to the exported thing (variable, function, etc). For example:
+**Named exports** are actual bindings (kind of like pointers) to the exported thing (variable, function, etc). For example:
 
     // File #1
     let awesome = 23;
@@ -12,11 +12,12 @@ Named exports are actual bindings (kind of like pointers) to the exported thing 
     console.log(awesome); // 23
     update();
     console.log(awesome); // 100
-    Even though awesome holds a primitive value (and primitive values are immutable), because the awesome export is a binding to the variable (not to the value), the second output is 100.
+    
+Even though awesome holds a primitive value (and primitive values are immutable), because the awesome export is a binding to the variable (not to the value), the second output is 100.
 
 Take-away: named exports are bindings to the variable, not references to the value.
 
-Standard default exports export a binding to the expression (not to the variable).
+Standard **default exports** export a binding to the expression (not to the variable).
 
     // File #1
     let awesome = 23;
@@ -28,4 +29,5 @@ Standard default exports export a binding to the expression (not to the variable
     console.log(stuff.awesome); // 23
     stuff.update();
     console.log(stuff.awesome); // 23
-    Take-away: default exports are bindings to the value, not the variable.
+    
+Take-away: default exports are bindings to the value, not the variable.

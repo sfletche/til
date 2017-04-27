@@ -13,11 +13,11 @@ Today I learned that JS imports have immutable bindings, which differ between na
     update();
     console.log(awesome); // 100
     
-Even though awesome holds a primitive value (and primitive values are immutable), because the awesome export is a binding to the variable (not to the value), the second output is 100.
+Even though `awesome` holds a primitive value (and primitive values are immutable), because the `awesome` export is a binding to the variable (not to the value), the second output is 100.
 
 Take-away: named exports are bindings to the variable, not references to the value.
 
-Standard **default exports** export a binding to the expression (not to the variable).
+Standard **default exports** export a binding to the expression or value (not to the variable).
 
     // File #1
     let awesome = 23;

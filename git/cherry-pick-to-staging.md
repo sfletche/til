@@ -1,0 +1,3 @@
+Turns out you can `git cherry-pick` a commit to your working directory without actually adding a commit to your branch...
+
+`git cherry-pick -n <sha` (where `-n` stands for `no commit`) stages the sha changeset without actually committing it to your branch.

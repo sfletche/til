@@ -22,3 +22,5 @@ export default const myConstant = Math.sqrt(2);
 import myFunction from 'my-module';
 import myConstant from 'other-module';
 ```
+
+More Notes: https://gist.github.com/sfletche/9b53668a2489a6885d0031062e769c7e

@@ -17,3 +17,5 @@ Now you should be able to use the aliases e.g.
 ```
 g pull
 ```
+
+See [Git Alias](https://github.com/sfletche/til/blob/master/git/git-alias.md) for creating git aliases through `git config`

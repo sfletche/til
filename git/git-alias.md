@@ -13,4 +13,4 @@ git co <branch-name>
 ```
 to checkout a branch (for example)
 
-See [Creating Alias](https://github.com/sfletche/til/edit/master/shell/creating-alias.md) for creating other bash aliases.
+See [Creating Alias](https://github.com/sfletche/til/blob/master/shell/alias-creation.md) for creating other bash aliases.

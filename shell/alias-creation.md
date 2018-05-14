@@ -3,15 +3,15 @@ Haven't done this in so long, I forgot how...adding here to help me remember for
 Adding aliases to `~/.bashrc` (or `.bash_profile` for mac)
 
 ```
-vi ~/.bashrc
+vi ~/.bash_profile
 ```
 add the following
 ```
 alias g='git'
 ```
-save, quit, and reload `bashrc` (bash run commands)
+save, quit, and reload your `bashrc` or `bash_profile` (bash run commands)
 ```
-. ~/.bashrc
+. ~/.bash_profile
 ```
 Now you should be able to use the aliases e.g.
 ```

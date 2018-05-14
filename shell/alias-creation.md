@@ -1,6 +1,6 @@
 Haven't done this in so long, I forgot how...adding here to help me remember for next time...
 
-Adding aliases to `~/.bashrc`
+Adding aliases to `~/.bashrc` (or `.bash_profile` for mac)
 
 ```
 vi ~/.bashrc

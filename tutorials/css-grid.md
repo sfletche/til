@@ -1,2 +1,2 @@
 
-Interactive tutorial for getting acquainted with CSS Grid: http://cssgridgarden.com/
+Interactive tutorial for getting acquainted with CSS Grid: https://cssgridgarden.com/

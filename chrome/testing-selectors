@@ -1,0 +1,3 @@
+From within the Elements tab in the Chrome dev tools...
+
+cmd-f will allow you to test dom selectors within the currently loaded document

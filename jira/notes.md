@@ -4,7 +4,7 @@ Issue Types
 - Bug
 - Dev Task
 - etc
-Issue Type Scheme (e.g. OC: Kanban Issue Type Scheme) -- https://premisedata.atlassian.net/secure/admin/ManageIssueTypeSchemes!default.jspa?actionedSchemeId=14891
+Issue Type Scheme (e.g. OC: Kanban Issue Type Scheme)
 - Used for configuring which Issue Types are present 
 - Actions
     - Edit the Issue Types 
@@ -14,7 +14,7 @@ Issue Type Scheme (e.g. OC: Kanban Issue Type Scheme) -- https://premisedata.atl
 
 Workflows
 - To Do -> In Progress -> Ready for Review -> etc
-Workflow Scheme (e.g. OC: On Call Simplified Workflow Scheme) -- https://premisedata.atlassian.net/plugins/servlet/project-config/OC/workflows
+Workflow Scheme (e.g. OC: On Call Simplified Workflow Scheme)
 - Actions
     - Add Status
     - Add Transition
@@ -22,16 +22,16 @@ Workflow Scheme (e.g. OC: On Call Simplified Workflow Scheme) -- https://premise
 
 Project is associated with one or more Workflow Scheme 
 - (e.g. OC: On Call Simplified Workflow Scheme) -- Issues -> Workflow Schemes
-- Project can be assigned a Workflow -- https://premisedata.atlassian.net/plugins/servlet/project-config/OC/workflows
+- Project can be assigned a Workflow 
 - Workflow includes Issue Types that will utilize this workflow (e.g. Research / Analysis and Bug)
 Projects are also associated with an Issue Type Scheme that defines the Issue Types available for that Project
-- e.g. see OC: Kanban Issue Type Scheme -- https://premisedata.atlassian.net/secure/admin/ManageIssueTypeSchemes!default.jspa
+- e.g. see OC: Kanban Issue Type Scheme
 
 
 Boards are configured for a Project
-- e.g. On Call Management board -- https://premisedata.atlassian.net/secure/RapidBoard.jspa?rapidView=322
+- e.g. On Call Management board 
 Boards are configured with specific Issue Types via an Issue Type Scheme
-- e.g. see OC: Kanban Issue Type Scheme -- https://premisedata.atlassian.net/secure/admin/ManageIssueTypeSchemes!default.jspa
+- e.g. see OC: Kanban Issue Type Scheme
 
 
 
